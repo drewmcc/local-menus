@@ -1,0 +1,41 @@
+{
+  "name": "Oogies",
+  "delivery": false,
+  "hours": "",
+  "phone": "(815) 867-5309",
+  "website": "https://google.com",
+  "last_updated": "2018-07-09 18:07",
+  "address": {
+    "street": "123 State St",
+    "city": "Ottawa",
+    "state": "IL",
+    "zip": "61350"
+  },
+  "menu": {
+    "breakfast": [
+      {
+        "name": "Scrambled Eggs",
+        "description": "Eggs straight from the farm",
+        "price": 9.99,
+        "vegan": false,
+        "vegetarian": true
+      },
+      {
+        "name": "Pancakes",
+        "description": "Pancakes w/ butter",
+        "price": 12.99,
+        "vegan": true,
+        "vegetarian": true
+      }
+    ],
+    "dinner": [
+      {
+        "name": "Polish Sausage",
+        "description": "Sausage just like Grandma used to make",
+        "price": 8.99,
+        "vegan": true,
+        "vegetarian": false
+      }
+    ]
+  }
+}
