@@ -6,14 +6,22 @@
       dump_restaurant_data($path[2]);
       break;
     default:
-      echo "INVALID ROUTE";
-      die("INVALID ROUTE");
+      echo "INVALID ROUTE<br />";
+      echo "Valid routes are:<br />";
+      echo "* /restaurant/[restaurant handle]<br />";
+      die();
       break;
   }
 
 function dump_restaurant_data($restaurant) {
-  $data = json_decode(file_get_contents("./data/$restaurant.json"), true);
-  // var_dump($data);
+  $file = file_get_contents("./data/$restaurant.json");
+
+  if ($file == FALSE) {
+    echo "INVALID RESTAURANT<br />";
+    die();
+  }
+
+  $data = json_decode($file, true);
 
   $html = "";
   $html .= "<html>";
