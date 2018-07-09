@@ -12,7 +12,7 @@
     "zip": "61350"
   },
   "menu": {
-    "breakfast": [
+    "Breakfast": [
       {
         "name": "Scrambled Eggs",
         "description": "Eggs straight from the farm",
@@ -28,7 +28,7 @@
         "vegetarian": true
       }
     ],
-    "dinner": [
+    "Dinner": [
       {
         "name": "Polish Sausage",
         "description": "Sausage just like Grandma used to make",
