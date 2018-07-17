@@ -16,7 +16,7 @@
       if (!empty($data['hours'])) {
       $html .= "<div>";
       $html .= "<h2>Hours</h2>";
-      $html .= $data['hours'];
+      $html .= nl2br($data['hours']);
       $html .= "</div>";
       }
       $html .= "<div>";
@@ -36,11 +36,11 @@
       $html .= "</div>";
       $html .= "<div>";
       $html .= "<h2>Menu</h2>";
-      foreach ($data['menu'] as $key => $section) {
-        $html .= "<h3>$key</h3>";
-        foreach ($section as $item) {
+      foreach ($data['menu'] as $section) {
+        $html .= "<h3>{$section['section_name']}</h3>";
+        foreach ($section['item'] as $item) {
           $html .= "<div>{$item['name']} {$item['price']}</div>";
-          $html .= "<div>{$item['description']}</div>";
+          $html .= "<div>" . nl2br($item['description']) . "</div>";
           $html .= "<hr />";
         }
       }

@@ -11,31 +11,36 @@
     "state": "IL",
     "zip": "61350"
   },
-  "menu": {
-    "Breakfast": [
-      {
-        "name": "Scrambled Eggs",
-        "description": "Eggs straight from the farm",
-        "price": 9.99,
-        "vegan": false,
-        "vegetarian": true
-      },
-      {
-        "name": "Pancakes",
-        "description": "Pancakes w/ butter",
-        "price": 12.99,
-        "vegan": true,
-        "vegetarian": true
-      }
-    ],
-    "Dinner": [
-      {
-        "name": "Polish Sausage",
-        "description": "Sausage just like Grandma used to make",
-        "price": 8.99,
-        "vegan": true,
-        "vegetarian": false
-      }
-    ]
-  }
+  "menu": [
+    {
+      "item_name": "Breakfast",
+      "item" : [
+        {
+          "name": "Scrambled Eggs",
+          "description": "Eggs straight from the farm",
+          "price": 9.99,
+          "vegan": false,
+          "vegetarian": true
+        },
+        {
+          "name": "Pancakes",
+          "description": "Pancakes w/ butter",
+          "price": 12.99,
+          "vegan": true,
+          "vegetarian": true
+        }
+      ]
+    },{
+      "item_name": "Dinner",
+      "item": [
+        {
+          "name": "Polish Sausage",
+          "description": "Sausage just like Grandma used to make",
+          "price": 8.99,
+          "vegan": true,
+          "vegetarian": false
+        }
+      ]
+    }
+  ]
 }
