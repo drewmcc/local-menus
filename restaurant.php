@@ -1,7 +1,7 @@
 <?php
   class Restaurant {
     public function human_readable($restaurant) {
-			$file = @file_get_contents("./data/$restaurant.json");
+			$file = file_get_contents("./data/$restaurant.json");
 
 			if ($file === FALSE) {
         die("INVALID RESTAURANT");
