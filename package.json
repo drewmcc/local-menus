@@ -1,5 +1,5 @@
 {
-  "name": "bvt",
+  "name": "ottawa-menu",
   "version": "1.0.0",
   "description": "",
   "main": "index.php",
@@ -12,6 +12,8 @@
     "autoprefixer": "^8.4.1",
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-sass": "^3.1.0"
   },
   "dependencies": {

@@ -1,0 +1,41 @@
+.inputgroup{
+  flex: 0 0 auto;
+  width: 100%;
+  label{
+    display: block;
+  }
+  input{
+    display: block;
+  }
+}
+
+input,
+label,
+textarea,
+select{
+  display: block;
+  width: 100%;
+}
+
+input,
+textarea,
+select{
+  background: #f2f4f5;
+  border: 1px solid #e0e4e5;
+  padding: 0.5rem;
+  border-radius: 2px;
+}
+
+button,
+input[type=submit]{
+  -webkit-appearance: none;
+  background: #fd7260;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 5em;
+  border: 0;
+  width: 100%;
+  outline: none;
+  margin: 0.2rem 0;
+}
