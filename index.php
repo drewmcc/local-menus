@@ -1,4 +1,5 @@
 <?php
+  require('header.php');
   require('restaurant.php');
 
   $path = explode('/', $_SERVER['REQUEST_URI']);

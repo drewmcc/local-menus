@@ -1,0 +1,123 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v3.0 | 20180413
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background: #f2f4f5; }
+
+* {
+  box-sizing: border-box; }
+
+body, input, textarea, button, select {
+  font-size: 16px;
+  font-family: "din-2014", sans-serif;
+  color: #3F4B57;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box; }
+
+.inputgroup {
+  flex: 0 0 auto;
+  width: 100%; }
+  .inputgroup label {
+    display: block; }
+  .inputgroup input {
+    display: block; }
+
+input,
+label,
+textarea,
+select {
+  display: block;
+  width: 100%; }
+
+input,
+textarea,
+select {
+  background: #f2f4f5;
+  border: 1px solid #e0e4e5;
+  padding: 0.5rem;
+  border-radius: 2px; }
+
+button,
+input[type=submit] {
+  -webkit-appearance: none;
+  background: #fd7260;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 5em;
+  border: 0;
+  width: 100%;
+  outline: none;
+  margin: 0.2rem 0; }
+
+.dashboard {
+  background: white;
+  max-width: 500px;
+  margin: 4rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 4rem 3rem;
+  box-shadow: 0 10px 160px -10px rgba(18, 45, 51, 0.3); }
+  .dashboard > div {
+    flex: 0 0 auto;
+    width: 100%; }
+  .dashboard h2 {
+    font-family: "din-condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    font-size: 36px;
+    color: #55935f;
+    line-height: 1;
+    margin: 1em 0 0.25em; }

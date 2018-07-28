@@ -1,13 +1,10 @@
 <?php
 if (isset($restaurant)):
 ?>
-<html>
   <body>
-    <form action='POST'>
-      <div>
-        <h2>Basic Information</h2>
-      </div>
-      <div>
+    <form action='POST' class="dashboard">
+      <h2>Basic Information</h2>
+      <div class="inputgroup">
         <label for='name'>Restaurant Name</label>
         <input type='text' name='name' value="<?php echo $restaurant['name'] ?>" />
       </div>
@@ -15,23 +12,21 @@ if (isset($restaurant)):
         <label>Delivery </label>
         <input type="checkbox" name="delivery" <?php echo ($restaurant['delivery'] ? "checked" : "") ?>>
       </div>
-      <div>
+      <div class="inputgroup">
         <label for='hours'>Hours of Operation</label>
         <textarea rows='5' type='text' name='hours'>
           <?php echo $restaurant['hours'] ?>
         </textarea>
       </div>
-      <div>
+      <div class="inputgroup">
         <label for='phone'>Phone Number</label>
         <input type='text' name='phone' value="<?php echo $restaurant['phone'] ?>"/>
       </div>
-      <div>
+      <div class="inputgroup">
         <label for='website'>Website</label>
         <input type='text' name='website' value="<?php echo $restaurant['website'] ?>"/>
       </div>
-      <div>
-        <h2>Address</h2>
-      </div>
+      <h2>Address</h2>
       <div>
         <label for='street'>Street Address</label>
         <input type='text' name='street' value="<?php echo $restaurant['address']['street'] ?>"/>
@@ -88,15 +83,15 @@ if (isset($restaurant)):
           </div>
           <?php endforeach; ?>
           <div>
-            <a class="add_item" onclick="add_item(this)">Add Item</a>
+            <button type="button" class="add_item" onclick="add_item(this)">Add Item</button>
           </div>
         </div>
       <?php endforeach; ?>
       <div>
-        <a class="add_section">Add Section</a>
+        <button type="button" class="add_section">Add Section</button>
       </div>
       <div>
-        <a class="save">Save Restaurant</a>
+        <button type="button" class="save">Save Restaurant</button>
       </div>
     </form>
     <script>
@@ -183,7 +178,7 @@ if (isset($restaurant)):
 <?php else: ?>
 <html>
   <body>
-    <form action='POST'>
+    <form action='POST' class="dashboard">
       <div>
         <h2>Basic Information</h2>
       </div>
@@ -263,14 +258,14 @@ if (isset($restaurant)):
           </div>
         </div>
         <div>
-          <a class="add_item" onclick="add_item(this)">Add Item</a>
+          <button type="button" class="add_item" onclick="add_item(this)">Add Item</button>
         </div>
       </div>
       <div>
-        <a class="add_section">Add Section</a>
+        <button type="button" class="add_section">Add Section</button>
       </div>
       <div>
-        <a class="save">Save Restaurant</a>
+        <button type="button" class="save">Save Restaurant</button>
       </div>
     </form>
     <script>
