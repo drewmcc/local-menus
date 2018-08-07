@@ -13,5 +13,5 @@
   </script>
   <link rel="stylesheet" href="https://use.typekit.net/kox0skv.css">
   <link rel="icon" type="image/png" href="/favicon.png"/>
-  <link rel="stylesheet" href="dest/style.css">
+  <link rel="stylesheet" href="/dest/style.css">
 </head>
