@@ -1,7 +1,8 @@
+<html>
+  <body>
 <?php
 if (isset($restaurant)):
 ?>
-  <body>
     <form action='POST' class="dashboard">
       <h2>Basic Information</h2>
       <div class="inputgroup">
@@ -94,90 +95,8 @@ if (isset($restaurant)):
         <button type="button" class="save">Save Restaurant</button>
       </div>
     </form>
-    <script>
-      let section_html = document.querySelector('.section').cloneNode(true),
-          item_html = document.querySelector('.item').cloneNode(true);
-
-      document.querySelector('.add_section').onclick = function () {
-        document.querySelector('form').insertBefore(section_html.cloneNode(true), this.parentNode);
-      };
-
-      function add_item(el) {
-        el.parentNode.parentNode.insertBefore(item_html.cloneNode(true), el.parentNode);
-      };
-
-      document.querySelector('.save').onclick = function () {
-        let today = new Date();
-        let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-
-        let minutes = today.getMinutes();
-        if (minutes.length == 1) {
-          minutes = "0" + minutes;
-        }
-
-        let seconds = today.getSeconds();
-        if (seconds.length == 1) {
-          seconds = "0" + seconds;
-        }
-
-        let time = today.getHours() + ":" + minutes + ":" + seconds;
-        let dateTime = date+' '+time;
-
-        let menu = [];
-
-        document.querySelectorAll('.section').forEach(function (section_el) {
-          let section  = {};
-
-          section.section_name = section_el.querySelector('[name="section_title"]').value;
-          section.item = [];
-          section_el.querySelectorAll('.item').forEach(function (item_el) {
-            let item = {
-              "name": item_el.querySelector('[name="item_name"]').value,
-              "description": item_el.querySelector('[name="item_description"]').value,
-              "price": item_el.querySelector('[name="price"]').value,
-              "vegan": item_el.querySelector('[name="vegan"]').checked,
-              "vegetarian": item_el.querySelector('[name="vegetarian"]').checked
-            };
-            section.item.push(item);
-          });
-
-          menu.push(section);
-        });
-
-        let data = {
-          "name": document.querySelector('[name="name"]').value,
-          "delivery": document.querySelector('[name="delivery"]').checked,
-          "hours": document.querySelector('[name="hours"]').value,
-          "phone": document.querySelector('[name="phone"]').value,
-          "website": document.querySelector('[name="website"]').value,
-          "last_updated": dateTime,
-          "address": {
-            "street": document.querySelector('[name="street"]').value,
-            "city": document.querySelector('[name="city"]').value,
-            "state": document.querySelector('[name="state"]').value,
-            "zip": document.querySelector('[name="zip"]').value
-          },
-          "menu": menu
-        };
-
-
-        var request = new XMLHttpRequest();
-        request.open('POST', '/save_restaurant.php', true);
-        request.send(JSON.stringify(data));
-
-        request.onreadystatechange = function () {
-          if(request.readyState === 4 && request.status === 200) {
-            alert('Restaurant Saved!');
-            // window.location.reload();
-          }
-        };
-      };
-    </script>
-  </body>
-</html>
 <?php else: ?>
 <html>
-  <body>
     <form action='POST' class="dashboard">
       <div>
         <h2>Basic Information</h2>
@@ -268,6 +187,7 @@ if (isset($restaurant)):
         <button type="button" class="save">Save Restaurant</button>
       </div>
     </form>
+<?php endif; ?>
     <script>
       let section_html = document.querySelector('.section').cloneNode(true),
           item_html = document.querySelector('.item').cloneNode(true);
@@ -349,5 +269,4 @@ if (isset($restaurant)):
     </script>
   </body>
 </html>
-<?php endif; ?>
 
