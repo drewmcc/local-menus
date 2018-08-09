@@ -1,13 +1,12 @@
 <?php
   require('header.php');
-  require('restaurant.php');
 
   $path = explode('/', $_SERVER['REQUEST_URI']);
 
   switch($path[1]) {
     case "restaurant":
-      $restaurant = new Restaurant();
-      $restaurant->human_readable($path[2]);
+      $restaurant = $path[2];
+      require('restaurant.php');
       break;
     case "edit":
       if (!is_null($path[2])) {
